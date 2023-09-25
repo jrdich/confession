@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YES</title>
+
+    <style>
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            background-color: #f0f0f0;
+            margin-top: 10%;
+            background-image: url(fireworks.gif);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <p>
+            As I sit down to write these words, I'm overwhelmed with gratitude and happiness. I wanted to take a moment to express my deepest thanks for accepting me as your boyfriend.
+
+            The day you said "yes" and agreed to be my girlfriend was one of the happiest and most unforgettable moments of my life. It marked the beginning of a beautiful journey, one filled with love, laughter, and countless memories that I will cherish forever.
+
+            I want you to know how truly special you are to me. Your kindness, your warmth, and your incredible personality have made my life so much brighter. You bring out the best in me, and I can't help but smile every time I think of you.
+
+            Being with you has been an amazing adventure, and I feel incredibly lucky to have you in my life. You have enriched my days with your presence, and I can't wait to see where our relationship takes us in the future.
+
+            Thank you for giving me a chance, for believing in us, and for being the wonderful person that you are. I promise to always cherish and respect our relationship, and to make every day we spend together as special as the day you became my girlfriend.
+
+            Once again, thank you from the bottom of my heart for choosing to be with me. 
+       </p> -->
+    </div>
+
+    <script>
+        const div = document.querySelector(".container");
+        const text = "As I sit down to write these words, I'm overwhelmed with gratitude and happiness. I wanted to take a moment to express my deepest thanks for accepting me as your boyfriend.The day you said yes and agreed to be my girlfriend was one of the happiest and most unforgettable moments of my life. It marked the beginning of a beautiful journey, one filled with love, laughter, and countless memories that I will cherish forever.I want you to know how truly special you are to me. Your kindness, your warmth, and your incredible personality have made my life so much brighter. You bring out the best in me, and I can't help but smile every time I think of you.Being with you has been an amazing adventure, and I feel incredibly lucky to have you in my life. You have enriched my days with your presence, and I can't wait to see where our relationship takes us in the future.Thank you for giving me a chance, for believing in us, and for being the wonderful person that you are. I promise to always cherish and respect our relationship, and to make every day we spend together as special as the day you became my girlfriend.Once again, thank you from the bottom of my heart for choosing to be with me.";
+
+        function textTypingEffect(element, text, i=0){
+            if (i === 0){
+                element.textContent = "";
+
+            }
+            element.textContent += text[i];
+
+            if (i === text.length - 1){
+                return;
+            }
+            setTimeout(() => textTypingEffect(element,text, i + 1), 50);
+
+        }
+        textTypingEffect(div,text);
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Position Button</title>
+    <style>
+      #Button1 {
+              background-color: #ff69b4;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              font-size: 18px;
+              cursor: pointer;
+              margin-top: 0%;
+              margin-left: -8%;
+        }
+        #Button2 {
+              background-color: #6985ff;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              font-size: 18px;
+              cursor: pointer;
+              position: absolute;
+              transform: translate(-50%, -50%);
+              margin-top: 1.5%;
+              margin-left: 4%;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3288eb;
+            margin-top: 10%;
+            background-image: url("falling_hearts.gif");
+            
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+          h1 {
+            color: #ff69b4;
+          }
+    </style>
+</head>
+<body>
+  <div class="container">
+      
+      <p>Dear [Crush's Name],</p>
+      <p>
+        I have something important to ask you, and I thought it would be fun to
+        do it this way.
+      </p>
+      <h1>Will You Be My One and Only?</h1>
+       <button id="Button1" onclick="window.location.href = 'yes.html';">Yes</button>
+       <button id="Button2">No</button>
+      <p id="response"></p>
+  </div>
+
+  
+    
+    
+
+    <script>
+
+        
+        const button = document.getElementById('Button2');
+
+        function getRandomPosition() {
+            const maxWidth = window.innerWidth - button.clientWidth;
+            const maxHeight = window.innerHeight - button.clientHeight;
+
+            const randomX = Math.random() * maxWidth;
+            const randomY = Math.random() * maxHeight;
+
+            button.style.left = `${randomX}px`;
+            button.style.top = `${randomY}px`;
+        }
+
+        button.addEventListener('mouseenter', getRandomPosition);
+
+        // To make the button unclickable
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>
