@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Position Button</title>
+    <title>My Confession for YOU</title>
     <style>
       #Button1 {
               background-color: #ff69b4;
@@ -28,6 +28,7 @@
               transform: translate(-50%, -50%);
               margin-top: 1.5%;
               margin-left: 4%;
+             
         }
         body {
             font-family: Arial, sans-serif;
@@ -37,7 +38,7 @@
             
         }
         .container {
-            max-width: 600px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
@@ -48,7 +49,27 @@
 
           h1 {
             color: #ff69b4;
-          }
+        }
+
+        @media only screen and (max-width: 1200px) {
+             #Button2 {
+              background-color: #6985ff;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 5px;
+              font-size: 18px;
+              cursor: pointer;
+              position: absolute;
+              transform: translate(-50%, -50%);
+              margin-top: 5.5%;
+              margin-left: 9%;
+        }
+        
+        }
+
+
+          
     </style>
 </head>
 <body>
@@ -91,6 +112,7 @@
         button.addEventListener('click', (event) => {
             event.preventDefault();
         });
+        
     </script>
 </body>
 </html>
